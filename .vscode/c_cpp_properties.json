@@ -17,11 +17,13 @@
     {
       "name": "STM32",
       "includePath": [
+        "App/Inc",
         "Core/Inc",
         "Drivers/CMSIS/Device/ST/STM32F4xx/Include",
         "Drivers/CMSIS/Include",
         "Drivers/STM32F4xx_HAL_Driver/Inc",
-        "Drivers/STM32F4xx_HAL_Driver/Inc/Legacy"
+        "Drivers/STM32F4xx_HAL_Driver/Inc/Legacy",
+        "Intermediate/Inc"
       ],
       "defines": [
         "STM32F401xC",

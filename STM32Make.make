@@ -66,6 +66,8 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
 
 
 CPP_SOURCES = \
+App/Src/concrete_elephant_states.cpp \
+App/Src/elephant.cpp
 
 
 # ASM sources
@@ -134,11 +136,13 @@ AS_INCLUDES = \
 
 # C includes
 C_INCLUDES =  \
+-IApp/Inc \
 -ICore/Inc \
 -IDrivers/CMSIS/Device/ST/STM32F4xx/Include \
 -IDrivers/CMSIS/Include \
 -IDrivers/STM32F4xx_HAL_Driver/Inc \
--IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy
+-IDrivers/STM32F4xx_HAL_Driver/Inc/Legacy \
+-IIntermediate/Inc
 
 
 

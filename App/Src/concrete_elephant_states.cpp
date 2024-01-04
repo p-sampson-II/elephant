@@ -25,7 +25,7 @@ void ElephLightSleep::toggle(Elephant* elephant) {
  * @brief Wake up the board from "light sleep."
  * 
  * @param elephant The persistent object representing the physical system.
- */extend
+ */
 void ElephLightSleep::exit(Elephant* elephant) {}
 
 /**
