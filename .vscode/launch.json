@@ -35,8 +35,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": false,
-      "cwd": "/home/paul/stm32/ElephantR9/Core/Src",
-      "program": "/home/paul/stm32/ElephantR9/Core/Src/build/Debug/outDebug",
+      "cwd": "/home/paul/stm32/ElephantR9/App/Src",
+      "program": "/home/paul/stm32/ElephantR9/App/Src/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [

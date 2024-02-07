@@ -1,29 +1,34 @@
 #pragma once
-#include <array.h>
+#include <array>
+#include "stm32f4xx_hal.h"
 #include "sys_const.h"
+#include "concrete_interrupt_handlers.h"
 
-class AudioSystem {
+extern void Error_Handler();
+
+class Audio {
 public:
-    AudioSystem(I2C_HandleTypeDef& hi2c,
+    Audio(I2C_HandleTypeDef& hi2c,
                 DMA_HandleTypeDef& hdma_spi_tx,
-                I2S_HandleTypeDef& hi2s,
-                array<uint16_t,audio_buffer_size>& sampleBuffer);
+                i2sObject& i2sObj); // I2S_HandleTypeDef& hi2s
 
-    AudioSystem(I2C_HandleTypeDef& hi2c,
-                DMA_HandleTypeDef& hdma_spi_tx,
-                I2S_HandleTypeDef& hi2s);
+    Audio();
 
-    AudioSystem();
+    Audio(const Audio& other);
+    Audio& operator=(const Audio& other);
 
     void play();
-    void setBuffer(std::array<uint16_t,audio_buffer_size>& sampleBuffer);
+    void i2sTxCompleteCallback();
+
+    std::array<int16_t,audio_buffer_size*nSpeakers()>& getBufferInstance();
 
 private:
     inline bool isBufferSet();
 
-    std::array<uint16_t,audio_buffer_size>* sampleBuffer;
 
-    I2S_HandleTypeDef* hi2s;
+    std::array<int16_t,audio_buffer_size*nSpeakers()> sampleBuffer;
+
+    i2sObject* i2sObj;
     DMA_HandleTypeDef* hdma_spi_tx;
     I2C_HandleTypeDef* hi2c;
-}
+};

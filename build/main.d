@@ -1,4 +1,4 @@
-build/main.o: Core/Src/main.c Core/Inc/main.h \
+build/main.o: Core/Src/main.cpp Core/Inc/main.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h \
  Core/Inc/stm32f4xx_hal_conf.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rcc.h \
@@ -29,7 +29,10 @@ build/main.o: Core/Src/main.c Core/Inc/main.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h \
  Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h \
- Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h
+ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h \
+ Core/Inc/audio_test.h Intermediate/Inc/audio.h Core/Inc/sys_const.h \
+ Intermediate/Inc/concrete_interrupt_handlers.h \
+ Intermediate/Inc/interrupt_handler.h
 Core/Inc/main.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal.h:
 Core/Inc/stm32f4xx_hal_conf.h:
@@ -64,3 +67,8 @@ Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_rtc_ex.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_spi.h:
 Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_uart.h:
+Core/Inc/audio_test.h:
+Intermediate/Inc/audio.h:
+Core/Inc/sys_const.h:
+Intermediate/Inc/concrete_interrupt_handlers.h:
+Intermediate/Inc/interrupt_handler.h:

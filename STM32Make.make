@@ -36,7 +36,6 @@ BUILD_DIR = build
 ######################################
 # C sources
 C_SOURCES =  \
-Core/Src/main.c \
 Core/Src/stm32f4xx_hal_msp.c \
 Core/Src/stm32f4xx_it.c \
 Core/Src/system_stm32f4xx.c \
@@ -66,8 +65,10 @@ Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_uart.c
 
 
 CPP_SOURCES = \
-App/Src/concrete_elephant_states.cpp \
-App/Src/elephant.cpp
+Core/Src/audio_test.cpp \
+Core/Src/main.cpp \
+Intermediate/Src/audio.cpp \
+Intermediate/Src/concrete_interrupt_handlers.cpp
 
 
 # ASM sources
@@ -179,7 +180,7 @@ LIBDIR = \
 
 
 # Additional LD Flags from config file
-ADDITIONALLDFLAGS = -specs=nano.specs 
+ADDITIONALLDFLAGS = -specs=nosys.specs 
 
 LDFLAGS = $(MCU) $(ADDITIONALLDFLAGS) -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIR)/$(TARGET).map,--cref -Wl,--gc-sections
 
@@ -198,7 +199,6 @@ vpath %.cpp $(sort $(dir $(CPP_SOURCES)))
 OBJECTS += $(addprefix $(BUILD_DIR)/,$(notdir $(C_SOURCES:.c=.o)))
 vpath %.c $(sort $(dir $(C_SOURCES)))
 
-# list of ASM program objects
 # list of ASM program objects
 UPPER_CASE_ASM_SOURCES = $(filter %.S,$(ASM_SOURCES))
 LOWER_CASE_ASM_SOURCES = $(filter %.s,$(ASM_SOURCES))
@@ -223,7 +223,7 @@ $(BUILD_DIR)/%.o: %.S STM32Make.make | $(BUILD_DIR)
 	$(AS) -c $(CFLAGS) $< -o $@
 
 $(BUILD_DIR)/$(TARGET).elf: $(OBJECTS) STM32Make.make
-	$(CC) $(OBJECTS) $(LDFLAGS) -o $@
+	$(CXX) $(OBJECTS) $(LDFLAGS) -o $@
 	$(SZ) $@
 
 $(BUILD_DIR)/%.hex: $(BUILD_DIR)/%.elf | $(BUILD_DIR)

@@ -97,11 +97,11 @@
         )
       )
     )
-    (symbol "Connector:Conn_01x05_Pin" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
-      (property "Reference" "J" (at 0 7.62 0)
+    (symbol "Connector:Conn_01x07_Pin" (pin_names (offset 1.016) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "J" (at 0 10.16 0)
         (effects (font (size 1.27 1.27)))
       )
-      (property "Value" "Conn_01x05_Pin" (at 0 -7.62 0)
+      (property "Value" "Conn_01x07_Pin" (at 0 -10.16 0)
         (effects (font (size 1.27 1.27)))
       )
       (property "Footprint" "" (at 0 0 0)
@@ -116,13 +116,21 @@
       (property "ki_keywords" "connector" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (property "ki_description" "Generic connector, single row, 01x05, script generated" (at 0 0 0)
+      (property "ki_description" "Generic connector, single row, 01x07, script generated" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
       (property "ki_fp_filters" "Connector*:*_1x??_*" (at 0 0 0)
         (effects (font (size 1.27 1.27)) hide)
       )
-      (symbol "Conn_01x05_Pin_1_1"
+      (symbol "Conn_01x07_Pin_1_1"
+        (polyline
+          (pts
+            (xy 1.27 -7.62)
+            (xy 0.8636 -7.62)
+          )
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
         (polyline
           (pts
             (xy 1.27 -5.08)
@@ -163,6 +171,18 @@
           (stroke (width 0.1524) (type default))
           (fill (type none))
         )
+        (polyline
+          (pts
+            (xy 1.27 7.62)
+            (xy 0.8636 7.62)
+          )
+          (stroke (width 0.1524) (type default))
+          (fill (type none))
+        )
+        (rectangle (start 0.8636 -7.493) (end 0 -7.747)
+          (stroke (width 0.1524) (type default))
+          (fill (type outline))
+        )
         (rectangle (start 0.8636 -4.953) (end 0 -5.207)
           (stroke (width 0.1524) (type default))
           (fill (type outline))
@@ -183,25 +203,37 @@
           (stroke (width 0.1524) (type default))
           (fill (type outline))
         )
-        (pin passive line (at 5.08 5.08 180) (length 3.81)
+        (rectangle (start 0.8636 7.747) (end 0 7.493)
+          (stroke (width 0.1524) (type default))
+          (fill (type outline))
+        )
+        (pin passive line (at 5.08 7.62 180) (length 3.81)
           (name "Pin_1" (effects (font (size 1.27 1.27))))
           (number "1" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 5.08 2.54 180) (length 3.81)
+        (pin passive line (at 5.08 5.08 180) (length 3.81)
           (name "Pin_2" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 5.08 0 180) (length 3.81)
+        (pin passive line (at 5.08 2.54 180) (length 3.81)
           (name "Pin_3" (effects (font (size 1.27 1.27))))
           (number "3" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 5.08 -2.54 180) (length 3.81)
+        (pin passive line (at 5.08 0 180) (length 3.81)
           (name "Pin_4" (effects (font (size 1.27 1.27))))
           (number "4" (effects (font (size 1.27 1.27))))
         )
-        (pin passive line (at 5.08 -5.08 180) (length 3.81)
+        (pin passive line (at 5.08 -2.54 180) (length 3.81)
           (name "Pin_5" (effects (font (size 1.27 1.27))))
           (number "5" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 5.08 -5.08 180) (length 3.81)
+          (name "Pin_6" (effects (font (size 1.27 1.27))))
+          (number "6" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 5.08 -7.62 180) (length 3.81)
+          (name "Pin_7" (effects (font (size 1.27 1.27))))
+          (number "7" (effects (font (size 1.27 1.27))))
         )
       )
     )
@@ -1010,6 +1042,73 @@
         )
         (pin input line (at -5.08 -2.54 0) (length 2.54)
           (name "2" (effects (font (size 1.27 1.27))))
+          (number "2" (effects (font (size 1.27 1.27))))
+        )
+      )
+    )
+    (symbol "Jumper:SolderJumper_2_Open" (pin_names (offset 0) hide) (in_bom yes) (on_board yes)
+      (property "Reference" "JP" (at 0 2.032 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Value" "SolderJumper_2_Open" (at 0 -2.54 0)
+        (effects (font (size 1.27 1.27)))
+      )
+      (property "Footprint" "" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "Datasheet" "~" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_keywords" "solder jumper SPST" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_description" "Solder Jumper, 2-pole, open" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (property "ki_fp_filters" "SolderJumper*Open*" (at 0 0 0)
+        (effects (font (size 1.27 1.27)) hide)
+      )
+      (symbol "SolderJumper_2_Open_0_1"
+        (arc (start -0.254 1.016) (mid -1.2656 0) (end -0.254 -1.016)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (arc (start -0.254 1.016) (mid -1.2656 0) (end -0.254 -1.016)
+          (stroke (width 0) (type default))
+          (fill (type outline))
+        )
+        (polyline
+          (pts
+            (xy -0.254 1.016)
+            (xy -0.254 -1.016)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (polyline
+          (pts
+            (xy 0.254 1.016)
+            (xy 0.254 -1.016)
+          )
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (arc (start 0.254 -1.016) (mid 1.2656 0) (end 0.254 1.016)
+          (stroke (width 0) (type default))
+          (fill (type none))
+        )
+        (arc (start 0.254 -1.016) (mid 1.2656 0) (end 0.254 1.016)
+          (stroke (width 0) (type default))
+          (fill (type outline))
+        )
+      )
+      (symbol "SolderJumper_2_Open_1_1"
+        (pin passive line (at -3.81 0 0) (length 2.54)
+          (name "A" (effects (font (size 1.27 1.27))))
+          (number "1" (effects (font (size 1.27 1.27))))
+        )
+        (pin passive line (at 3.81 0 180) (length 2.54)
+          (name "B" (effects (font (size 1.27 1.27))))
           (number "2" (effects (font (size 1.27 1.27))))
         )
       )
@@ -2021,11 +2120,17 @@
   (junction (at 87.63 57.15) (diameter 0) (color 0 0 0 0)
     (uuid e0520c9b-ad92-42bd-b553-505bfc07a8cd)
   )
+  (junction (at 69.85 25.4) (diameter 0) (color 0 0 0 0)
+    (uuid ee26ae92-9c10-4126-934e-5aaccbfed558)
+  )
   (junction (at 87.63 53.34) (diameter 0) (color 0 0 0 0)
     (uuid f0eff87b-13c5-43b0-8f60-a28050b4540f)
   )
   (junction (at 24.13 167.64) (diameter 0) (color 0 0 0 0)
     (uuid f26c0bfe-3d74-4be0-80ad-e5ec344beff2)
+  )
+  (junction (at 62.23 29.21) (diameter 0) (color 0 0 0 0)
+    (uuid f8f7f30f-e8f1-4404-8495-649f4a733df8)
   )
 
   (no_connect (at 123.19 99.06) (uuid 11eb3918-b03d-4db0-a6cd-4cd12c82d190))
@@ -2259,6 +2364,10 @@
     (stroke (width 0) (type default))
     (uuid 31e802f3-c6e6-46cd-9582-bf4a955413fe)
   )
+  (wire (pts (xy 69.85 25.4) (xy 69.85 30.48))
+    (stroke (width 0) (type default))
+    (uuid 32ac96b9-58fb-4e87-abfe-8e0c3b0d3fb3)
+  )
   (wire (pts (xy 222.25 86.36) (xy 237.49 86.36))
     (stroke (width 0) (type default))
     (uuid 348cd118-0788-48b7-a678-8ff6b12f43ea)
@@ -2363,6 +2472,10 @@
     (stroke (width 0) (type default))
     (uuid 5bbbb1af-bd07-4b51-a6df-e74a5dfaf05d)
   )
+  (wire (pts (xy 264.16 62.23) (xy 257.81 62.23))
+    (stroke (width 0) (type default))
+    (uuid 5cadb530-4058-4e81-86f7-f4baba6db1bb)
+  )
   (wire (pts (xy 90.17 119.38) (xy 92.71 119.38))
     (stroke (width 0) (type default))
     (uuid 5e3f5db4-501c-4bb3-ac01-89ad8e14a270)
@@ -2403,6 +2516,10 @@
     (stroke (width 0) (type default))
     (uuid 6a1c7605-b907-4b5a-a12d-a7a7a73508df)
   )
+  (wire (pts (xy 62.23 29.21) (xy 85.09 29.21))
+    (stroke (width 0) (type default))
+    (uuid 6af38d2b-5a3a-4290-b3a7-5f6f2a3d1b3e)
+  )
   (wire (pts (xy 53.34 26.67) (xy 53.34 29.21))
     (stroke (width 0) (type default))
     (uuid 6c16cb9a-ea2d-477e-a66a-8f5d01462b54)
@@ -2442,6 +2559,10 @@
   (wire (pts (xy 207.01 92.71) (xy 204.47 92.71))
     (stroke (width 0) (type default))
     (uuid 724a1e58-55a2-41fe-8757-7d2b251e20e3)
+  )
+  (wire (pts (xy 257.81 62.23) (xy 257.81 64.77))
+    (stroke (width 0) (type default))
+    (uuid 73137972-2ea5-426c-bf30-d8334a71d40d)
   )
   (wire (pts (xy 213.36 137.16) (xy 217.17 137.16))
     (stroke (width 0) (type default))
@@ -2527,6 +2648,10 @@
     (stroke (width 0) (type default))
     (uuid 8e5632c2-d87a-4f68-a520-b20fccb48b2f)
   )
+  (wire (pts (xy 257.81 46.99) (xy 257.81 44.45))
+    (stroke (width 0) (type default))
+    (uuid 8f374145-bc8e-4e94-aa21-3a82523b715f)
+  )
   (wire (pts (xy 90.17 165.1) (xy 92.71 165.1))
     (stroke (width 0) (type default))
     (uuid 8f8f37b8-b29a-4ea7-bdaa-77c8272536d6)
@@ -2603,7 +2728,7 @@
     (stroke (width 0) (type default))
     (uuid a14bd291-d583-4487-b203-cd52b02c850d)
   )
-  (wire (pts (xy 69.85 26.67) (xy 69.85 30.48))
+  (wire (pts (xy 69.85 22.86) (xy 69.85 25.4))
     (stroke (width 0) (type default))
     (uuid a31ca763-99c2-4edc-977d-2ba04394a787)
   )
@@ -2638,6 +2763,10 @@
   (wire (pts (xy 163.83 113.03) (xy 181.61 113.03))
     (stroke (width 0) (type default))
     (uuid acdf6ffc-0af7-4e45-a946-9b6a4bf32cc2)
+  )
+  (wire (pts (xy 264.16 46.99) (xy 257.81 46.99))
+    (stroke (width 0) (type default))
+    (uuid ad1ac6b8-447b-43e3-8a2b-80e6d783bf0f)
   )
   (wire (pts (xy 186.69 82.55) (xy 186.69 83.82))
     (stroke (width 0) (type default))
@@ -2727,7 +2856,7 @@
     (stroke (width 0) (type default))
     (uuid cbf73992-c552-4426-bf84-4b602d4bda53)
   )
-  (wire (pts (xy 53.34 29.21) (xy 85.09 29.21))
+  (wire (pts (xy 53.34 29.21) (xy 62.23 29.21))
     (stroke (width 0) (type default))
     (uuid cc2661ab-fb27-4e91-93fa-03e03b515de2)
   )
@@ -2854,6 +2983,10 @@
   (wire (pts (xy 261.62 52.07) (xy 264.16 52.07))
     (stroke (width 0) (type default))
     (uuid f02c293a-eb57-4de5-8380-de0a7745ffaf)
+  )
+  (wire (pts (xy 62.23 25.4) (xy 62.23 29.21))
+    (stroke (width 0) (type default))
+    (uuid f0b5ed5d-3adc-4111-8bc0-6810e6d3b5d3)
   )
   (wire (pts (xy 198.12 83.82) (xy 204.47 83.82))
     (stroke (width 0) (type default))
@@ -3046,7 +3179,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 4f0b9634-1a1a-4285-8b6b-5c559614658f)
   )
-  (label "pwr_buck" (at 69.85 26.67 0) (fields_autoplaced)
+  (label "pwr_buck" (at 69.85 22.86 0) (fields_autoplaced)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 540df010-55e1-4be3-868e-4f3232ef827e)
   )
@@ -3213,7 +3346,7 @@
     (pin "2" (uuid 1be88e34-3905-48ae-b192-efddfc800dbf))
     (pin "1" (uuid fd23267d-9d73-49ac-b6e6-3cbee509f1a0))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "SW1") (unit 1)
         )
@@ -3238,7 +3371,7 @@
     )
     (pin "1" (uuid c80c32dd-1f11-4323-a588-59a821766d4a))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR04") (unit 1)
         )
@@ -3255,7 +3388,7 @@
     (property "Value" "100nF" (at 191.77 91.44 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 192.7352 92.71 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 192.7352 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 191.77 88.9 0)
@@ -3264,7 +3397,7 @@
     (pin "2" (uuid 150010eb-08bd-4683-a814-fb3d7aef5908))
     (pin "1" (uuid 575ac613-c598-49a7-9e0c-3f3d76983935))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C16") (unit 1)
         )
@@ -3289,7 +3422,7 @@
     )
     (pin "1" (uuid 31e028cc-722a-42e3-8ea0-bee30d36a91c))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR017") (unit 1)
         )
@@ -3314,7 +3447,7 @@
     )
     (pin "1" (uuid e312074a-6e33-4b6d-916e-1e7c9c851749))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR01") (unit 1)
         )
@@ -3340,7 +3473,7 @@
     (pin "2" (uuid 74447db6-9608-4bc7-b961-6113b9c46add))
     (pin "1" (uuid 5aed5452-5aa7-405d-aab3-c2c6fb39b513))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C14") (unit 1)
         )
@@ -3365,7 +3498,7 @@
     )
     (pin "1" (uuid 4b40eec4-a4ce-4120-8178-e8828dc0bbaa))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR028") (unit 1)
         )
@@ -3390,7 +3523,7 @@
     )
     (pin "1" (uuid b0cfd705-0075-4280-a270-fe82693c8de8))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR029") (unit 1)
         )
@@ -3407,7 +3540,7 @@
     (property "Value" "470pF" (at 241.3 105.41 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 238.4552 107.95 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 238.4552 107.95 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 237.49 104.14 0)
@@ -3416,7 +3549,7 @@
     (pin "2" (uuid be943778-f1c1-48df-8c31-2b2979968f14))
     (pin "1" (uuid 5a9ae76d-ee8b-4199-a858-02a19cc3ae81))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C5") (unit 1)
         )
@@ -3441,7 +3574,7 @@
     )
     (pin "1" (uuid c27c19e1-ccc4-44e0-a740-5eb74778969e))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "TP2") (unit 1)
         )
@@ -3466,7 +3599,7 @@
     )
     (pin "1" (uuid 359e3883-f093-4f84-b196-c0486a1d71bf))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR03") (unit 1)
         )
@@ -3491,7 +3624,7 @@
     )
     (pin "1" (uuid f467ab36-afed-4479-906c-871cb7844a30))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR012") (unit 1)
         )
@@ -3516,7 +3649,7 @@
     )
     (pin "1" (uuid de1a7b15-cfd8-4560-9e42-46f2c4826748))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR033") (unit 1)
         )
@@ -3541,7 +3674,7 @@
     )
     (pin "1" (uuid 3d70b303-7a0f-437c-9578-5b2843d0e10b))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR014") (unit 1)
         )
@@ -3558,7 +3691,7 @@
     (property "Value" "470pF" (at 227.33 147.32 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 224.4852 149.86 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 224.4852 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 223.52 146.05 0)
@@ -3567,7 +3700,7 @@
     (pin "2" (uuid 85ccfff9-1130-4f4a-902a-9b63b865d2c4))
     (pin "1" (uuid 8c265d19-660b-4605-a251-8d3c89e6575c))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C7") (unit 1)
         )
@@ -3593,7 +3726,7 @@
     (pin "2" (uuid 7e84f07e-40b5-4a3b-80df-64a420d87279))
     (pin "1" (uuid 01cf784b-2ed2-41ff-b8f2-c67f3eacf969))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "L1") (unit 1)
         )
@@ -3617,7 +3750,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "H2") (unit 1)
         )
@@ -3649,7 +3782,7 @@
     (pin "2" (uuid 52ce51a8-a942-459c-9587-f16b53d4f7bb))
     (pin "8" (uuid d76d16bf-dcd2-4429-9a4a-7c306a1363c6))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "U4") (unit 1)
         )
@@ -3666,7 +3799,7 @@
     (property "Value" "2pF" (at 59.69 119.38 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 56.8452 116.84 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 56.8452 116.84 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 55.88 120.65 0)
@@ -3675,7 +3808,7 @@
     (pin "2" (uuid a49a6fec-c446-4b4a-af38-ef43449b92ca))
     (pin "1" (uuid 35ceb3ba-fc34-4df3-81fb-bfcba2b65f3e))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C9") (unit 1)
         )
@@ -3692,7 +3825,7 @@
     (property "Value" "2pF" (at 27.94 119.38 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 25.0952 116.84 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 25.0952 116.84 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 24.13 120.65 0)
@@ -3701,7 +3834,7 @@
     (pin "2" (uuid 00196502-3df2-4d22-b6d7-3b5a2d0f9920))
     (pin "1" (uuid 054f871b-fc26-42a2-a7d7-63e9c185b4f6))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C8") (unit 1)
         )
@@ -3718,7 +3851,7 @@
     (property "Value" "4pF" (at 58.42 173.99 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 55.5752 171.45 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 55.5752 171.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 54.61 175.26 0)
@@ -3727,7 +3860,7 @@
     (pin "2" (uuid fee79a76-7e5f-4769-953e-818fce70c765))
     (pin "1" (uuid 52a66d19-e600-4b71-8cee-2ec75fdcc993))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C13") (unit 1)
         )
@@ -3753,7 +3886,7 @@
     (pin "2" (uuid 75841734-c346-4ad8-a37e-d6fef02f9d34))
     (pin "1" (uuid eaff2de7-51ba-47c5-830f-0949b849ee74))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "R1") (unit 1)
         )
@@ -3778,7 +3911,7 @@
     )
     (pin "1" (uuid d1e243a9-c6fc-450f-87a5-5429bf558bd2))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR021") (unit 1)
         )
@@ -3803,7 +3936,7 @@
     )
     (pin "1" (uuid 2847217e-c0b0-435d-b985-b80bbca1ee67))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR027") (unit 1)
         )
@@ -3827,7 +3960,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "H1") (unit 1)
         )
@@ -3852,9 +3985,34 @@
     )
     (pin "1" (uuid 1bad2ae8-29ef-4c31-bbe4-be6edb7173e8))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR036") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:+3.3V") (at 257.81 44.45 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 66957fb9-d481-4cb7-a357-d00a70df6299)
+    (property "Reference" "#PWR035" (at 257.81 48.26 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "+3.3V" (at 257.81 39.37 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 257.81 44.45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 257.81 44.45 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid f3269575-0052-4139-b88c-f2c968e8e3d6))
+    (instances
+      (project "Elephant0.9.2"
+        (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
+          (reference "#PWR035") (unit 1)
         )
       )
     )
@@ -3876,7 +4034,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "H4") (unit 1)
         )
@@ -3901,7 +4059,7 @@
     )
     (pin "1" (uuid 9cce1db3-3a6e-4164-adeb-e78c7f01c331))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR018") (unit 1)
         )
@@ -3926,7 +4084,7 @@
     )
     (pin "1" (uuid 346762d9-8c2f-426a-84df-9863d71ba004))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR025") (unit 1)
         )
@@ -3952,7 +4110,7 @@
     (pin "1" (uuid 7dfd51bc-cd9f-48fe-af0e-7a0f99bf0d60))
     (pin "2" (uuid 22199858-aa49-49ad-87b7-5eeda08a694b))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "FB2") (unit 1)
         )
@@ -3977,7 +4135,7 @@
     )
     (pin "1" (uuid 49d9506c-195a-4198-8eef-a51e764a2821))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR07") (unit 1)
         )
@@ -4003,7 +4161,7 @@
     (pin "1" (uuid 5f729ae8-6758-4902-b150-e06d027298f7))
     (pin "2" (uuid e122ca4a-30b6-457a-8e5f-1032b4a80184))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "FB4") (unit 1)
         )
@@ -4031,7 +4189,7 @@
     (pin "3" (uuid 00948744-74c7-4246-8e2a-2f10da996db0))
     (pin "4" (uuid cb2d1bcc-150d-41f9-b341-534afebe9bcc))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "Y2") (unit 1)
         )
@@ -4056,7 +4214,7 @@
     )
     (pin "1" (uuid 877cfeaf-3da1-4742-b3f2-837b8429c6ca))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "TP1") (unit 1)
         )
@@ -4082,7 +4240,7 @@
     (pin "2" (uuid f95d85a9-84f6-473a-a9b9-afea2b519a26))
     (pin "1" (uuid 51a32676-682b-4557-a5b0-72f1e39bf6c7))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "R7") (unit 1)
         )
@@ -4107,7 +4265,7 @@
     )
     (pin "1" (uuid 3803499f-60fc-4418-a01b-7db769aabde7))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR015") (unit 1)
         )
@@ -4132,7 +4290,7 @@
     )
     (pin "1" (uuid 5bec31ba-e0c3-4fc2-a270-f0545dcf7825))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR06") (unit 1)
         )
@@ -4157,7 +4315,7 @@
     )
     (pin "1" (uuid b7f9c2c2-c19b-411f-a412-86b004f2b888))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR08") (unit 1)
         )
@@ -4174,7 +4332,7 @@
     (property "Value" "470pF" (at 227.33 105.41 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 224.4852 107.95 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 224.4852 107.95 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 223.52 104.14 0)
@@ -4183,7 +4341,7 @@
     (pin "2" (uuid 0821d32d-18ee-4277-b564-84d0c54f4291))
     (pin "1" (uuid d90afff6-ad50-459e-9d07-a9e2fca96ba1))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C6") (unit 1)
         )
@@ -4211,7 +4369,7 @@
     (pin "3" (uuid 5d7568c1-9228-4c50-b44f-8812a1eb5d35))
     (pin "4" (uuid 9de73525-6273-4bbf-892a-230108490df9))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "Y1") (unit 1)
         )
@@ -4237,9 +4395,35 @@
     (pin "2" (uuid d1d479c3-a88d-4046-ac72-0e24532c40c5))
     (pin "1" (uuid 58e6d4fe-fb7d-4f1f-b57e-975210259a1c))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "D3") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "Jumper:SolderJumper_2_Open") (at 66.04 25.4 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 8da5f179-1bc1-4177-bcc8-4e851ca24089)
+    (property "Reference" "JP1" (at 66.04 19.05 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Value" "SolderJumper_2_Open" (at 66.04 21.59 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "Jumper:SolderJumper-2_P1.3mm_Open_Pad1.0x1.5mm" (at 66.04 25.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "~" (at 66.04 25.4 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "2" (uuid f50e5908-8d94-460f-93ae-40d3c1745c11))
+    (pin "1" (uuid e13f5cb2-18bf-4a40-b373-677c9a52599c))
+    (instances
+      (project "Elephant0.9.2"
+        (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
+          (reference "JP1") (unit 1)
         )
       )
     )
@@ -4262,9 +4446,34 @@
     )
     (pin "1" (uuid 7f317390-ae0b-45c7-9d16-8a657f85ce69))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR09") (unit 1)
+        )
+      )
+    )
+  )
+
+  (symbol (lib_id "power:GND") (at 257.81 64.77 0) (unit 1)
+    (in_bom yes) (on_board yes) (dnp no) (fields_autoplaced)
+    (uuid 938c2492-2088-465c-a196-7213f2106f5c)
+    (property "Reference" "#PWR039" (at 257.81 71.12 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Value" "GND" (at 257.81 69.85 0)
+      (effects (font (size 1.27 1.27)))
+    )
+    (property "Footprint" "" (at 257.81 64.77 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (property "Datasheet" "" (at 257.81 64.77 0)
+      (effects (font (size 1.27 1.27)) hide)
+    )
+    (pin "1" (uuid 6b3ad6c5-5630-4561-bc46-d686e8aa31b4))
+    (instances
+      (project "Elephant0.9.2"
+        (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
+          (reference "#PWR039") (unit 1)
         )
       )
     )
@@ -4288,7 +4497,7 @@
     (pin "2" (uuid b3fee874-1607-454a-8646-0d7cc2f6ef37))
     (pin "1" (uuid f3c7530e-556e-4f8f-8754-4e0e5fefc8c7))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C1") (unit 1)
         )
@@ -4314,7 +4523,7 @@
     (pin "2" (uuid c51bdd8c-5896-4097-853c-f191258f2207))
     (pin "1" (uuid 17e5e77b-1990-4692-b3ab-1bad0c9cc9c0))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C3") (unit 1)
         )
@@ -4358,7 +4567,7 @@
     (pin "21" (uuid 4778fd02-6246-4c76-81aa-09f5cec9bd29))
     (pin "22" (uuid f7f14154-c71d-4d1f-bbac-b40f84b8d728))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "U1") (unit 1)
         )
@@ -4383,7 +4592,7 @@
     )
     (pin "1" (uuid 5b20136f-5db7-48e9-a27e-a8e5eab1e66a))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR038") (unit 1)
         )
@@ -4409,7 +4618,7 @@
     (pin "2" (uuid 500d7413-3197-4b04-b3f1-ffb9d4bdc516))
     (pin "1" (uuid 6054edf5-54d3-4fe6-9c12-d769efcdabf2))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C4") (unit 1)
         )
@@ -4482,7 +4691,7 @@
     (pin "10" (uuid 95276596-4961-49ad-8409-861b32aa0ed9))
     (pin "49" (uuid d3fee6ef-bac0-4b11-82c0-b02207440076))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "U5") (unit 1)
         )
@@ -4508,7 +4717,7 @@
     (pin "1" (uuid ea2998dc-5254-404c-bce3-adffdf8a0133))
     (pin "2" (uuid de509e8d-6628-4c5f-8411-a1360a3e9367))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "FB3") (unit 1)
         )
@@ -4534,7 +4743,7 @@
     (pin "1" (uuid e2675753-f7f9-47ea-a939-18585ceac863))
     (pin "2" (uuid d8de0028-7e0f-488c-92a0-b78de914fddb))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "BT2") (unit 1)
         )
@@ -4551,7 +4760,7 @@
     (property "Value" "470pF" (at 241.3 147.32 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 238.4552 149.86 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 238.4552 149.86 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 237.49 146.05 0)
@@ -4560,7 +4769,7 @@
     (pin "2" (uuid 1bb9706c-8a29-4afd-93c4-c0995351a261))
     (pin "1" (uuid 8e444b56-8201-4629-ad53-eb6bdaffff3d))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C11") (unit 1)
         )
@@ -4577,7 +4786,7 @@
     (property "Value" "10nF" (at 24.13 59.69 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 22.5552 62.23 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 22.5552 62.23 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 21.59 58.42 0)
@@ -4586,7 +4795,7 @@
     (pin "2" (uuid 112d13a1-f6c5-4b5b-90f7-466471f81579))
     (pin "1" (uuid 5944f597-9f42-4f33-a24a-0970e23344e8))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C15") (unit 1)
         )
@@ -4611,7 +4820,7 @@
     )
     (pin "1" (uuid c3d7adbe-4497-4ec4-bcbf-0f72b1627dce))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR05") (unit 1)
         )
@@ -4636,7 +4845,7 @@
     )
     (pin "1" (uuid db61825b-059e-452b-b9e2-285be3bf54da))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR023") (unit 1)
         )
@@ -4661,7 +4870,7 @@
     )
     (pin "1" (uuid 94c672c8-1d7e-4838-9583-198af84de5aa))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR013") (unit 1)
         )
@@ -4686,7 +4895,7 @@
     )
     (pin "1" (uuid c77f682a-e4ef-47ea-a119-54b3c5b1ffd8))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR026") (unit 1)
         )
@@ -4711,7 +4920,7 @@
     )
     (pin "1" (uuid 2a327a3a-9a48-437e-8e87-ed5bbf1623e2))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR037") (unit 1)
         )
@@ -4736,7 +4945,7 @@
     )
     (pin "1" (uuid 714e78dd-6865-4417-9b46-8fdb984fa442))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR010") (unit 1)
         )
@@ -4761,7 +4970,7 @@
     )
     (pin "1" (uuid a002fd2a-8ac3-42d4-95e7-6402df871aec))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR020") (unit 1)
         )
@@ -4787,7 +4996,7 @@
     (pin "1" (uuid bf8b06ea-2eda-4a7e-9eed-f0cdc00d1abe))
     (pin "2" (uuid a05d9326-a9b0-42d8-9b13-b43c9ee6682e))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "LS1") (unit 1)
         )
@@ -4813,7 +5022,7 @@
     (pin "2" (uuid 944eedde-2cfb-4b98-b0d2-c7c3237d0456))
     (pin "1" (uuid 26c5b909-3ed8-4ad3-94d5-c4fc053534b8))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "R4") (unit 1)
         )
@@ -4838,7 +5047,7 @@
     )
     (pin "1" (uuid 0f136b48-f74f-416c-b9be-641fd1980641))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR02") (unit 1)
         )
@@ -4864,7 +5073,7 @@
     (pin "2" (uuid b7dc517c-f25c-473c-b995-607e53d53734))
     (pin "1" (uuid 8a62ec2c-1a1a-4361-ac05-f80a1a37b3e3))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C2") (unit 1)
         )
@@ -4889,7 +5098,7 @@
     )
     (pin "1" (uuid 98a6ef1a-be77-47a2-bc21-c65983b6fbda))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR032") (unit 1)
         )
@@ -4914,7 +5123,7 @@
     )
     (pin "1" (uuid 92a11841-47e9-48b7-bce2-abf34fd22d27))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR031") (unit 1)
         )
@@ -4931,7 +5140,7 @@
     (property "Value" "4pF" (at 27.94 173.99 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 25.0952 171.45 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 25.0952 171.45 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 24.13 175.26 0)
@@ -4940,7 +5149,7 @@
     (pin "2" (uuid 9281a94d-474b-4b3d-9314-4a9a151afc13))
     (pin "1" (uuid 8065d021-564e-4215-9ad6-31992dfc647d))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C12") (unit 1)
         )
@@ -4948,16 +5157,16 @@
     )
   )
 
-  (symbol (lib_id "Connector:Conn_01x05_Pin") (at 269.24 54.61 0) (mirror y) (unit 1)
+  (symbol (lib_id "Connector:Conn_01x07_Pin") (at 269.24 54.61 0) (mirror y) (unit 1)
     (in_bom yes) (on_board yes) (dnp no)
     (uuid da5d639b-64d0-4c55-9730-cb25ce721372)
-    (property "Reference" "J2" (at 268.605 44.45 0)
+    (property "Reference" "J2" (at 269.24 40.64 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Value" "Conn_01x05_Pin" (at 268.605 46.99 0)
+    (property "Value" "Conn_01x07_Pin" (at 269.24 43.18 0)
       (effects (font (size 1.27 1.27)))
     )
-    (property "Footprint" "Connector_JST:JST_PH_B5B-PH-K_1x05_P2.00mm_Vertical" (at 269.24 54.61 0)
+    (property "Footprint" "Connector_JST:JST_PH_B7B-PH-K_1x07_P2.00mm_Vertical" (at 269.24 54.61 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 269.24 54.61 0)
@@ -4968,8 +5177,10 @@
     (pin "5" (uuid b11bfcd1-8e5c-4873-b991-1cd710e3081e))
     (pin "4" (uuid ab0aa77a-f062-42d5-af53-dd39cad6f5ee))
     (pin "3" (uuid 8d4eaba6-94c3-4dfa-a007-1cfc99b28d8c))
+    (pin "6" (uuid 9c96b877-fd86-4823-853b-c162bb7daa79))
+    (pin "7" (uuid dfac16af-5ea1-4e0f-a0b3-b7e023bd1592))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "J2") (unit 1)
         )
@@ -4986,7 +5197,7 @@
     (property "Value" "100nF" (at 180.34 90.17 0)
       (effects (font (size 1.27 1.27)) (justify left))
     )
-    (property "Footprint" "Capacitor_SMD:C_0201_0603Metric" (at 177.4952 92.71 0)
+    (property "Footprint" "Capacitor_SMD:C_0603_1608Metric" (at 177.4952 92.71 0)
       (effects (font (size 1.27 1.27)) hide)
     )
     (property "Datasheet" "~" (at 176.53 88.9 0)
@@ -4995,7 +5206,7 @@
     (pin "2" (uuid 9eb493d1-3525-4a57-adcd-2604f1bf3607))
     (pin "1" (uuid d3858f52-82e4-4c67-86c2-ab5c7a4be376))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C18") (unit 1)
         )
@@ -5021,7 +5232,7 @@
     (pin "1" (uuid 75c45398-bcb9-4881-97a4-12b98d181559))
     (pin "2" (uuid f6b7c8c3-07dd-4872-b489-9f9829f3b7d6))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "LS2") (unit 1)
         )
@@ -5047,7 +5258,7 @@
     (pin "2" (uuid 6c637d01-c290-4fda-a775-e45f557c70e0))
     (pin "1" (uuid 013ec19d-eaf8-4f79-be99-afbed5e1864e))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C17") (unit 1)
         )
@@ -5072,7 +5283,7 @@
     )
     (pin "1" (uuid bdb3d2a9-2462-442c-97fe-5b421622626c))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR024") (unit 1)
         )
@@ -5098,7 +5309,7 @@
     (pin "1" (uuid 64d48a1f-b01e-4883-b77b-0d73874d3790))
     (pin "2" (uuid 007632c4-2a34-4895-b4c5-a2249cafea59))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "R2") (unit 1)
         )
@@ -5123,7 +5334,7 @@
     )
     (pin "1" (uuid ef6298d3-965f-4a6a-a269-4edc428c19dc))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR034") (unit 1)
         )
@@ -5149,7 +5360,7 @@
     (pin "1" (uuid 6889df0f-0a41-4fa5-baea-c312194cea79))
     (pin "2" (uuid 7f43c58f-c562-413d-9f8d-db13007ab2e2))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "BT1") (unit 1)
         )
@@ -5174,7 +5385,7 @@
     )
     (pin "1" (uuid fa14cde4-fc35-497f-b0a6-d5e2f07b58ca))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR019") (unit 1)
         )
@@ -5200,7 +5411,7 @@
     (pin "1" (uuid 84bbb34a-fe8b-4777-80f9-0ff9f116041d))
     (pin "2" (uuid cfa6b5ef-471e-41e5-b7d9-62e2f1b009a7))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "FB1") (unit 1)
         )
@@ -5225,7 +5436,7 @@
     )
     (pin "1" (uuid 169292dd-d01c-44e9-85da-098df67b5e39))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR022") (unit 1)
         )
@@ -5270,7 +5481,7 @@
     (pin "12" (uuid 4c29acfb-72ab-41e9-ab4a-b36738a32134))
     (pin "21" (uuid 3e1759f3-7852-4775-a762-264eee1b8dbe))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "U3") (unit 1)
         )
@@ -5295,7 +5506,7 @@
     )
     (pin "1" (uuid 6877dc15-7b43-44a4-9377-a87d9bb1adaa))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR016") (unit 1)
         )
@@ -5323,7 +5534,7 @@
     (pin "3" (uuid 58fe679b-378e-4e48-9f3e-04c768e0716d))
     (pin "2" (uuid fdffeb61-f15f-4e21-b612-37ba0a4b4c21))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "J1") (unit 1)
         )
@@ -5348,7 +5559,7 @@
     )
     (pin "1" (uuid c593d5c9-3d13-4c8b-9ee3-14ff70dbc2c2))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR011") (unit 1)
         )
@@ -5374,7 +5585,7 @@
     (pin "2" (uuid 89c0ea5d-eb08-4a9f-988a-8efafb67803c))
     (pin "1" (uuid f7a019a6-923c-45cf-b610-0a42e8088c54))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "R8") (unit 1)
         )
@@ -5398,7 +5609,7 @@
       (effects (font (size 1.27 1.27)) hide)
     )
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "H3") (unit 1)
         )
@@ -5424,7 +5635,7 @@
     (pin "2" (uuid 340a9fdd-4799-4c8e-8076-6daf987fabdf))
     (pin "1" (uuid 406f4768-1fc7-4e45-b01f-3f72b9528b4a))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "C10") (unit 1)
         )
@@ -5449,7 +5660,7 @@
     )
     (pin "1" (uuid f5598d72-8236-4dc0-847d-93bc29b334ed))
     (instances
-      (project "ElephantR9"
+      (project "Elephant0.9.2"
         (path "/3e5bafa6-6b85-4d17-8ae2-6879b1aa0633"
           (reference "#PWR030") (unit 1)
         )
